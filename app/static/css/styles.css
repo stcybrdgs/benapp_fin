@@ -249,7 +249,31 @@ nav a{
   margin-left: 20px;
 }
 
-/* Gallery modal  ------------------------------------------------------------*/
+/* About modal  --------------------------------------------------------------*/
+#about-div{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#about-div h4{
+  color: rgb(61, 162, 192);
+}
+
+#accordionExample button,
+#accordionExample button:hover,
+#accordionExample button:active{
+  text-decoration: none;
+}
+
+#about-div span{
+  font-weight: 600;
+  color: rgb(61, 162, 192);
+}
+
+#about-div .card-body{
+  font-size: 1.1em;
+}
+
 .modal-dialog-full-width {
   width: 100% !important;
   height: 100% !important;

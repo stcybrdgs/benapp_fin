@@ -115,7 +115,7 @@ def getBenfordAnalysis():
     stats = {}                                                      # create a blank object to capture stats
     stats['totRows'] = len(df.index)                                # get stat: tot rows in submitted column
 
-    df['char1'] = df['params'].astype(str).str[0]                   # make dataframe with a column of 1st chars
+    df['firstChar'] = df['params'].astype(str).str[0]               # make dataframe with a column of 1st chars
     df['included'] = df['params'].astype(str).str.match("^[1-9]")   # add column showing which 1st chars are digits 1 to 9
     df.to_csv(getFolderPath() + '/static/inclusionsReport.csv')     # save a csv showing which records were included in the analysis
     df.drop(df[df['included'] != True].index, inplace = True)       # now drop records that won't be analyzed
@@ -125,8 +125,8 @@ def getBenfordAnalysis():
 
     # if any numerical 1st chars exist, then do the analysis:
     if stats['keptRows'] > 0:
-        forAnalysis = pd.Series(df['char1'])                        # make the chars col into a series that can be analyzed
-        bennySeries = pd.Series(df['char1'])                        # get a series of the numbers to be analyzed
+        forAnalysis = pd.Series(df['firstChar'])                    # make the chars col into a series that can be analyzed
+        bennySeries = pd.Series(df['firstChar'])                    # get a series of the numbers to be analyzed
         bennyVals = bennySeries.value_counts(normalize=True)        # get the dist vals
         bennyVals = bennyVals.round(decimals=3).tolist()            # round the dist vals to precision 3
         bennyIndex = bennySeries.value_counts().index.tolist()      # get a list of the indices in range (1,9)

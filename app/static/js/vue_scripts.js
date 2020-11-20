@@ -61,6 +61,9 @@ const app = new Vue({
     links: {
       linkedin: 'https://www.linkedin.com/in/stcybrdgs/',
       github: 'https://github.com/stcybrdgs/benapp_bstrap',
+      dockerImage: 'https://hub.docker.com/r/stcybrdgs/scb-apps/tags',
+      tabulatorSite: 'http://tabulator.info/',
+      highchartsSite: 'https://www.highcharts.com/'
     },
   },
 
