@@ -1,0 +1,70 @@
+<!-- about modal (full-page, material design) -->
+<div class="container my-4">
+  <div
+    class="modal fade right pr-0 pl-0"
+    id="about"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="aboutLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog-full-width modal-dialog momodel modal-fluid" role="document">
+      <div class="modal-content-full-width modal-content ">
+
+        <!-- Header -->
+        <div class="modal-header-full-width modal-header text-center shadow">
+          <h4 class="modal-title w-100 mt-2" id="aboutLabel">
+            About</h4>
+          <a
+            href="#"
+            class="close text-white border-0"
+            data-dismiss="modal"
+            aria-label="Close">
+            <span
+              aria-hidden="true"
+              style="font-size: 1.6em"
+              >&times;</span>
+          </a>
+        </div>
+
+        <!-- Body -->
+        <div class="card-body">
+          <div
+            class="d-flex flex-wrap justify-content-center"
+            id="aboutDiv">
+
+            <!-- About content -->
+            <p>
+
+            - chi limit set to 8 <br>
+            - analysis is only for non-dropped records <br>
+            - if analysis shows a distribution of less than 1%, it is not included in results <br>
+            - headers are transformed to aid display in tabulator <br>
+            - hash ids weren't used, though in a real app they would be <br>
+            - backend is AWS S3 <br>
+            - docker hub link <br>
+            - link to aws api for library <br>
+            - app doesn't test for numerical only... <br>
+              - so, if you have products that start with a numeral, they are fair game <br>
+              - however, if you have products that start with an alpha, they are not <br>
+            - if no records are analyzed, chi result is auto set to 9999, which is of course a failure <br>
+            - if filename already exists in app library, upload nothing and alert user <br>
+            - decimals rendered in scientific notation can get picked up, so logic needs more rigor in this area <br>
+
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer-full-width modal-footer">
+          <button
+            type="button"
+            class="btn btn-md btn-outline-info btn-rounded modal-btn"
+            data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
