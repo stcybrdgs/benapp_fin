@@ -1,8 +1,8 @@
 ### About:
 
-This app is a mini full-stack app that uses Vue.js and Flask to compare CSV data against Benford's Law.
+This app is a mini full-stack app that uses Vue.js and Flask to compare CSV data against [Benford's Law](https://en.wikipedia.org/wiki/Benford's_law).
 
-It allows a user to upload a CSV file, pick a column from it, and then compare the numerical distribution of that column against [Benford's Law](https://en.wikipedia.org/wiki/Benford's_law).
+It allows a user to upload a CSV file and see how any column's numerical distribution compares to Benford's.
 
 ### Demo:
 A working demo of this app is available at [VueToots](http://www.vuetoots.com/).
