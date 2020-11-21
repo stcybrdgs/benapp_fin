@@ -45,7 +45,7 @@ body{
 
 
 /* Highcharts  ---------------------------------------------------------------*/
-.trashcan-container{
+/* .trashcan-container{
   position: relative;
 }
 
@@ -63,15 +63,15 @@ body{
 
 .trashcan-btn:hover{
   color: red;
-}
+} */
 
 #container {
   height: 400px;
 }
 
-#galleryDiv{
+/* #galleryDiv{
   padding: 0;
-}
+} */
 
 .gbenny{
   padding-top: 4px;
@@ -109,28 +109,32 @@ body{
 }
 
 .highcharts-data-table caption {
-    padding: 1em 0;
-    font-size: 1.2em;
-    color: #555;
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
 }
 
 .highcharts-data-table th {
 	font-weight: 600;
-    padding: 0.5em;
+  padding: 0.5em;
 }
 
 .highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
-    padding: 0.5em;
+  padding: 0.5em;
 }
 
 .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
-    background: #f8f8f8;
+  background: #f8f8f8;
 }
 
 .highcharts-data-table tr:hover {
-    background: #f1f7ff;
+  background: #f1f7ff;
 }
 
+.highcharts-title,
+.highcharts-subtitle {
+  font-size: 1.2em;
+}
 
 /* Navbar  -------------------------------------------------------------------*/
 nav a{
@@ -259,19 +263,20 @@ nav a{
   color: rgb(61, 162, 192);
 }
 
-#accordionExample button,
-#accordionExample button:hover,
-#accordionExample button:active{
-  text-decoration: none;
-}
-
 #about-div span{
   font-weight: 600;
   color: rgb(61, 162, 192);
 }
 
-#about-div .card-body{
+#accordionExample .card-body{
   font-size: 1.1em;
+  padding: 30px;
+}
+
+#accordionExample button,
+#accordionExample button:hover,
+#accordionExample button:active{
+  text-decoration: none;
 }
 
 .modal-dialog-full-width {

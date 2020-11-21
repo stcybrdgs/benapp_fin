@@ -60,7 +60,7 @@ const app = new Vue({
     inputFilename: '',  // <-- the input field on 'local' import modal
     links: {
       linkedin: 'https://www.linkedin.com/in/stcybrdgs/',
-      github: 'https://github.com/stcybrdgs/benapp_bstrap',
+      github: 'https://github.com/stcybrdgs/benapp_fin',
       dockerImage: 'https://hub.docker.com/r/stcybrdgs/scb-apps/tags',
       tabulatorSite: 'http://tabulator.info/',
       highchartsSite: 'https://www.highcharts.com/'
@@ -266,7 +266,7 @@ const app = new Vue({
         // update menu on library import modal and toast user
         .then( (res) => {
           this.libCsvMenu.push(this.csvFilename);
-          Notiflix.Notify.Info(res.data['msg']);
+          Notiflix.Notify.Success(res.data['msg']);
         });
       }
     },

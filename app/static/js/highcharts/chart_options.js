@@ -3,10 +3,17 @@ var chartOptions = {
 			type: 'line'
 		},
     title: {
-        text: 'Benford\'s Law'
+        text: 'Benford\'s Law',
+				style: {
+					color: '#5bbfde',
+					fontWeight: 'bold'
+				}
     },
     subtitle: {
-        text: 'A Comparison of Predicted vs Actual Numerical Distribution'
+        text: 'A Comparison of Predicted vs Actual Numerical Distribution',
+				style: {
+					color: '#5bbfde'
+				}
     },
     yAxis: {
         min: 0,
