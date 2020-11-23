@@ -54,12 +54,16 @@ def home_page():
 
 @app.route('/getLibCsvMenu', methods=['POST'])
 def getLibCsvMenu():
+    print('getLibCsvMenu()')
+
     fnames = getLibFnames()
     return jsonify( { "libCsvMenu": fnames } )
 
 
 @app.route('/getLibCsv', methods=['POST'])
 def getLibCsv():
+    print('getLibCsv()')
+
     filename = request.get_json()['params']
     libCsv = getFolderPath() + r'/static/lib/' + filename
 
@@ -86,6 +90,8 @@ def getLibCsv():
 
 @app.route('/addCsvToLibrary', methods=['POST'])
 def addCsvToLibrary():
+    print('addCsvToLibrary()')
+
     # rem data object looks like: {'results': results.data, 'filename': self.csvFilename}
     data = request.get_json() # get data
     file = getFolderPath() + '/static/lib/' + data['filename']  # define save path
@@ -176,4 +182,5 @@ def getBenfordAnalysis():
 
 
 if __name__ == '__main__' :
+    # app.run()
     app.run(host="0.0.0.0",port=80)

@@ -179,6 +179,8 @@ const app = new Vue({
         // if user tries to get a benny without selecting a field, throw an alert
         Notiflix.Notify.Failure('Choose a field to get a Benny.');
       } else {
+        Notiflix.Notify.Info('Getting your Benny...');
+        
         // get the column data for the user-selected field
         var colDefs = this.tabulator.getColumnDefinitions();
         var tabledata = this.tabulator.getData()
@@ -209,17 +211,14 @@ const app = new Vue({
           this.chartOptions.title.text = this.csvFilename;  // update the chart title
           this.chartOptions.subtitle.text = 'field: ' + this.selectedFieldName;  // update the chart subtitle
           this.chartOptions.series[1].data = chartPoints;  // update the analysis data
+          this.highchart = Highcharts.chart('container', this.chartOptions);  // initialize the highcharts object
 
-          // initialize the highcharts object
-          this.highchart = Highcharts.chart('container', this.chartOptions);
-
-        })
-        .then(
-          Notiflix.Notify.Success('You have a new Benny !')
-        )
-        .then(
-          $("#bennyModal").modal()
-        )
+          this.$nextTick( function(){
+            // after the highchart resets, notify user of the new benny and open the benny report modal
+            Notiflix.Notify.Success('You have a new Benny !');
+            $("#bennyModal").modal();
+          })
+        });
       }
     },
 
@@ -259,7 +258,8 @@ const app = new Vue({
       if( this.libCsvMenu.includes(this.csvFilename) ){
         Notiflix.Notify.Failure('Not added to Library-- filename exists!');
       } else{
-        axios.post( 'http://localhost:8001/addCsvToLibrary', {
+        //axios.post( 'http://localhost:8001/addCsvToLibrary', {
+        axios.post( '/addCsvToLibrary', {
             'results': results.data,
             'filename': this.csvFilename,
         })
@@ -385,7 +385,7 @@ const app = new Vue({
   	},
 
     getLibCsv: function() {
-      axios.post( 'http://localhost:8001/getLibCsv', { params: this.libCsvChoice } )
+      axios.post( '/getLibCsv', { params: this.libCsvChoice } )
         .then( (res) => {
           this.csvFilename = this.libCsvChoice;
           this.csvHeaders = res.data['csvHeaders'];
@@ -400,7 +400,7 @@ const app = new Vue({
   /* Hooks  ------------------------------------------------------------------*/
   created: function(){
     // get the filenames of CSVs that are in the app library
-    axios.post( 'http://localhost:8001/getLibCsvMenu' )
+    axios.post( '/getLibCsvMenu' )
       .then( (res) => {
         this.libCsvMenu = res.data.libCsvMenu
       });

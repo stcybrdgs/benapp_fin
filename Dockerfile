@@ -21,7 +21,7 @@ RUN pip install -r requirements.txt
 COPY /app .
 
 # Expose
-EXPOSE 5050
+#EXPOSE 5000
 
 # run the py app
 CMD ["python", "/app/app.py"]
