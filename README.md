@@ -4,7 +4,7 @@
 
 Users may upload a **.csv** file and select any column to see how its numerical distribution compares to Benford's.
 
-A working **Demo** is available on AWS at **[VueToots.com](http://vuetoots.com/)**. A Docker image is also available on **[Docker Hub](https://hub.docker.com/r/stcybrdgs/scb-apps/tags)**.
+A working **Demo** is available on AWS at **[VueToots.com](http://www.vuetoots.com)**. A Docker image is also available on **[Docker Hub](https://hub.docker.com/r/stcybrdgs/scb-apps/tags)**.
 
 ```
 docker pull stcybrdgs/scb-apps:thebennyapp
