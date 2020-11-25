@@ -180,7 +180,7 @@ const app = new Vue({
         Notiflix.Notify.Failure('Choose a field to get a Benny.');
       } else {
         Notiflix.Notify.Info('Getting your Benny...');
-        
+
         // get the column data for the user-selected field
         var colDefs = this.tabulator.getColumnDefinitions();
         var tabledata = this.tabulator.getData()
@@ -338,6 +338,12 @@ const app = new Vue({
     },
 
     loadTabulator: function() {
+      // clear any filters that may exist from a previous table
+      if( this.tabulatorColumns.length > 0 ){
+        this.tabulator.clearFilter(true);  // clear any header filters
+        this.tabulator.setGroupBy("");  // clear any groupings
+      }
+
       // create an array to be pushed into Tabulator headers
       var tabCols = [];
 
