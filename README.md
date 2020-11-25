@@ -8,7 +8,7 @@ A working **Demo** is available on AWS at **[VueToots.com](https://www.vuetoots.
 
 A  **Demo Video** is available on **[YouTube](https://youtu.be/rowh15YFsgw)**.
 
-A **Docker Image** is available on **[Docker Hub](https://hub.docker.com/r/stcybrdgs/scb-apps/tags)**.
+A **Docker Image** is available on **[Docker Hub](https://hub.docker.com/r/stcybrdgs/scb-apps)**.
 
 ```
 docker pull stcybrdgs/scb-apps:thebennyapp
