@@ -45,33 +45,9 @@ body{
 
 
 /* Highcharts  ---------------------------------------------------------------*/
-/* .trashcan-container{
-  position: relative;
-}
-
-.trashcan-btn{
-  display: inline-block;
-  color: rgb(91, 192, 222);
-  padding: 10px;
-  margin: 0px;
-  position: absolute;
-  z-index: 2;
-  top: 20px;
-  left: 20px;
-  transition: color .3s;
-}
-
-.trashcan-btn:hover{
-  color: red;
-} */
-
 #container {
   height: 400px;
 }
-
-/* #galleryDiv{
-  padding: 0;
-} */
 
 .gbenny{
   padding-top: 4px;
@@ -135,6 +111,7 @@ body{
 .highcharts-subtitle {
   font-size: 1.2em;
 }
+
 
 /* Navbar  -------------------------------------------------------------------*/
 nav a{

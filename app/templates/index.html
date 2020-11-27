@@ -66,6 +66,7 @@
         {% include 'modals/loadFromLocal.html' %}
         {% include 'modals/about.html' %}
         {% include 'modals/highchartsResults.html' %}
+        {% include 'modals/videomodal.html' %}
 
       </div>
     </div>
@@ -77,11 +78,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
     <script src="{{ url_for('static',filename='js/vue_scripts.js') }}"></script>
 
-    <!-- activate code-snippets -->
     <script>
+    // jQuery activate code-snippets (ie, copy to clipboard feature)
     (function(){
       new Clipboard('#copy-button');
     })();
+
+    // jQuery stop youtube video on close of video modal
+    $(document).ready(function(){
+      $('a.stop-video').click(function(){
+      	$('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+      });
+    });
+
     </script>
 
   </body>
