@@ -4,7 +4,7 @@
 
 Users may upload a **.csv** file and select any column to see how its numerical distribution compares to Benford's.
 
-The **Live App** is available on AWS at **[VueToots.com](https://www.vuetoots.com/)**.
+The **Live App** is available on **[Heroku](https://the-benny-app.herokuapp.com/)**.
 
 A **Docker Image** is available on **[Docker Hub](https://hub.docker.com/r/stcybrdgs/scb-apps)**.
 
